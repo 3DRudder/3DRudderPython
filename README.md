@@ -1,39 +1,29 @@
-----------------------------------
-# 3DRudderPython
-----------------------------------
----------------------
-Introduction
----------------------
+![language](https://img.shields.io/badge/Language-python3.5.2-green.svg) 
+![dependencies](https://img.shields.io/badge/Dependecies-3dRudderSDK-green.svg)
+![Firmware 3dRudder](https://img.shields.io/badge/Firmware%203dRudder-%3E%20v1.3.5.2-brightgreen.svg)
 
-This is the pre-release of the 3DRudder Python Module
+# 3dRudderPython
 
----------------------
-Getting Started
----------------------
+## Introduction
 
- #-- Prerequisities 
+This is the Release of the 3dRudder Python Module.
+Integration of the 3dRudder (SDK v0.75)
 
-	+OS Windows 2000 minimum
+## Getting Started
+
+### Prerequisities 
+* OS Windows 7 minimum
 	
+## Built with
 
----------------------
-Built with
----------------------
+### Integrated Development Environment 
+* This programm was coded with Python.
 
-  #-- Integrated Development Environment 
+### Language 
+* Python 3.5.2
 
-	This programm was coded with Python.
-
-  #-- Language 
-  
-	Python 3.5.2
-
-  #-- External libraries
-
-	None
-
----------------------
-License
----------------------
-
-3DRudder - All copyrights reserved.
+### External libraries
+* None
+	
+## License
+3dRudder - All copyrights reserved.
