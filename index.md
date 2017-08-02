@@ -17,7 +17,7 @@ Integration of the 3dRudder (SDK v0.75)
 ## Built with
 
 ### Integrated Development Environment 
-* This programm was coded with Python.
+* This program was coded with Python.
 
 ### Language 
 * Python 3.5.2
