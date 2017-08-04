@@ -7,7 +7,7 @@
 ## Introduction
 
 This is the Release of the 3dRudder Python Module.
-Integration of the 3dRudder (SDK v0.75)
+Integration of the 3dRudder (SDK v 1.00)
 
 ## Getting Started
 
@@ -20,10 +20,11 @@ Integration of the 3dRudder (SDK v0.75)
 * This programm was coded with Python.
 
 ### Language 
+* Python 2.7
 * Python 3.5.2
 
 ### External libraries
 * None
 	
 ## License
-3dRudder - All copyrights reserved.
+3dRudder 2016-2017 All copyrights reserved.
