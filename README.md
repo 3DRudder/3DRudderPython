@@ -1,5 +1,5 @@
 ![language](https://img.shields.io/badge/Language-python%202.7-green.svg) 
-![language](https://img.shields.io/badge/Language-python 3.5.2-green.svg) 
+![language](https://img.shields.io/badge/Language-python%203.5.2-green.svg) 
 ![dependencies](https://img.shields.io/badge/Dependecies-3dRudderSDK-green.svg)
 ![Firmware 3dRudder](https://img.shields.io/badge/Firmware%203dRudder-%3E%20v1.3.5.2-brightgreen.svg)
 
