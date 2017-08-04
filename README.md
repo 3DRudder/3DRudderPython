@@ -25,6 +25,12 @@ Integration of the 3dRudder (SDK v 1.0)
 * Python 2.7
 * Python 3.5.2
 
+### samples 
+
+* sample_01.py : This sample presents the basic Function of the SDK.
+* sample_02.py : This sample presents the Custom Curves.
+* sample_03.py : This sample presents the Event processing.
+
 ### External libraries
 * None
 	
