@@ -138,6 +138,36 @@ NormalizedValue = _ns3DRudder.NormalizedValue
 ValueWithCurve = _ns3DRudder.ValueWithCurve
 NormalizedValueNonSymmetricalPitch = _ns3DRudder.NormalizedValueNonSymmetricalPitch
 ValueWithCurveNonSymmetricalPitch = _ns3DRudder.ValueWithCurveNonSymmetricalPitch
+class Tone(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Tone, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Tone, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        this = _ns3DRudder.new_Tone(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_setmethods__["m_nFrequency"] = _ns3DRudder.Tone_m_nFrequency_set
+    __swig_getmethods__["m_nFrequency"] = _ns3DRudder.Tone_m_nFrequency_get
+    if _newclass:
+        m_nFrequency = _swig_property(_ns3DRudder.Tone_m_nFrequency_get, _ns3DRudder.Tone_m_nFrequency_set)
+    __swig_setmethods__["m_nDurationOfTone"] = _ns3DRudder.Tone_m_nDurationOfTone_set
+    __swig_getmethods__["m_nDurationOfTone"] = _ns3DRudder.Tone_m_nDurationOfTone_get
+    if _newclass:
+        m_nDurationOfTone = _swig_property(_ns3DRudder.Tone_m_nDurationOfTone_get, _ns3DRudder.Tone_m_nDurationOfTone_set)
+    __swig_setmethods__["m_nPauseAfterTone"] = _ns3DRudder.Tone_m_nPauseAfterTone_set
+    __swig_getmethods__["m_nPauseAfterTone"] = _ns3DRudder.Tone_m_nPauseAfterTone_get
+    if _newclass:
+        m_nPauseAfterTone = _swig_property(_ns3DRudder.Tone_m_nPauseAfterTone_get, _ns3DRudder.Tone_m_nPauseAfterTone_set)
+    __swig_destroy__ = _ns3DRudder.delete_Tone
+    __del__ = lambda self: None
+Tone_swigregister = _ns3DRudder.Tone_swigregister
+Tone_swigregister(Tone)
+
 class Curve(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, Curve, name, value)
@@ -161,8 +191,8 @@ class Curve(_object):
     def GetDeadZone(self):
         return _ns3DRudder.Curve_GetDeadZone(self)
 
-    def GeXSat(self):
-        return _ns3DRudder.Curve_GeXSat(self)
+    def GetXSat(self):
+        return _ns3DRudder.Curve_GetXSat(self)
 
     def GetYMax(self):
         return _ns3DRudder.Curve_GetYMax(self)
@@ -173,8 +203,8 @@ class Curve(_object):
     def SetDeadZone(self, fV):
         return _ns3DRudder.Curve_SetDeadZone(self, fV)
 
-    def SeXSat(self, fV):
-        return _ns3DRudder.Curve_SeXSat(self, fV)
+    def SetXSat(self, fV):
+        return _ns3DRudder.Curve_SetXSat(self, fV)
 
     def SetYMax(self, fV):
         return _ns3DRudder.Curve_SetYMax(self, fV)
@@ -367,6 +397,9 @@ class CSdk(_object):
     def PlaySnd(self, nPortNumber, nFrequency, nDuration):
         return _ns3DRudder.CSdk_PlaySnd(self, nPortNumber, nFrequency, nDuration)
 
+    def PlaySndEx(self, *args):
+        return _ns3DRudder.CSdk_PlaySndEx(self, *args)
+
     def GetUserOffset(self, nPortNumber, pAxis):
         return _ns3DRudder.CSdk_GetUserOffset(self, nPortNumber, pAxis)
 
@@ -387,6 +420,9 @@ class CSdk(_object):
 
     def SetEvent(self, pEvent):
         return _ns3DRudder.CSdk_SetEvent(self, pEvent)
+
+    def CalcCurveValue(self, fDeadZone, fxSat, fyMax, fExp, fValue):
+        return _ns3DRudder.CSdk_CalcCurveValue(self, fDeadZone, fxSat, fyMax, fExp, fValue)
 CSdk_swigregister = _ns3DRudder.CSdk_swigregister
 CSdk_swigregister(CSdk)
 
