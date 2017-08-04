@@ -6,11 +6,12 @@
 # 
 # SDK 3dRudder
 #
-# Copyright (C) 2010-2017 3dRudder
+# Copyright (C) 2016-2017 3dRudder
 #
 #####################################################################################
-import time
 import platform
+
+
 
 # 32 or 64 bit
 val_max=platform.architecture()
@@ -20,6 +21,8 @@ if (val_max[0]=='32bit') :
     from win32.ns3DRudder import * #import SDk 3dRudder
 else:
     from x64.ns3DRudder import * #import SDk 3dRudder
+import time
+
 
 #-------------------------------------
 #-------------------------------------
