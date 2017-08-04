@@ -11,7 +11,7 @@ This is the Release of the 3dRudder Python Module.
 Integration of the 3dRudder (SDK v 1.0)
 
 ## Getting Started
-* https://www.3drudder.com/start/
+* https://www.3drudder.com/start
 
 ### Prerequisities 
 * OS Windows 7 minimum
@@ -19,7 +19,7 @@ Integration of the 3dRudder (SDK v 1.0)
 ## Built with
 
 ### Integrated Development Environment 
-* This programm was coded with Python.
+* This program was coded with Python.
 
 ### Language 
 * Python 2.7
