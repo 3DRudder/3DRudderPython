@@ -30,6 +30,8 @@ Integration of the 3dRudder (SDK v 1.0)
 * sample_01.py : This sample presents the basic Function of the SDK.
 * sample_02.py : This sample presents the Custom Curves.
 * sample_03.py : This sample presents the Event processing.
+* sample_04.py : First sample presents the Tone Function.
+* sample_05.py : Second sample presents the Tone Function.
 
 ### External libraries
 * None
