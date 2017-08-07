@@ -6,22 +6,28 @@
 # 
 # SDK 3dRudder
 #
-# Copyright (C) 2010-2017 3dRudder
+# Copyright (C) 2016-2017 3dRudder
 #
 #####################################################################################
-import platform
+
+
+
+import sys
 import time
+import platform
+
+
 
 # 32 or 64 bit
 val_max=platform.architecture()
 
-
-
 print(val_max[0])
 if (val_max[0]=='32bit') : 
-    from win32.Python352.ns3DRudder import * #import SDk 3dRudder
+	from win32.ns3DRudder import * #import SDk 3dRudder
 else:
-    from x64.Python352.ns3DRudder import * #import SDk 3dRudder
+	from x64.ns3DRudder import * #import SDk 3dRudder
+
+	
 
 #define the Status of the 3dRudder
 status_3dRudder = [ "None",
@@ -187,10 +193,7 @@ try:
         print("3dRudder is not Connected")
         time.sleep(1)
     
-    #Get Version of SDK
-    versionSdk=sdk.GetSDKVersion()
-    print ("Version SDK : {:1x}".format(versionSdk))
-    
+  
     #Get Version of The Firmware
     version=sdk.GetVersion(nPortNumber)
     print ("Version FirmWare : {:1x}".format(version))
