@@ -11,7 +11,7 @@ This is the Release of the 3dRudder Python Module.
 Integration of the 3dRudder (SDK v 1.0)
 
 ## Getting Started
-* https://www.3drudder.com/start
+* https://www.3drudder.com/start/
 
 ### Prerequisities 
 * OS Windows 7 minimum
@@ -19,11 +19,19 @@ Integration of the 3dRudder (SDK v 1.0)
 ## Built with
 
 ### Integrated Development Environment 
-* This program was coded with Python.
+* This programm was coded with Python.
 
 ### Language 
 * Python 2.7
 * Python 3.5.2
+
+### samples 
+
+* sample_01.py : This sample presents the basic Function of the SDK.
+* sample_02.py : This sample presents the Custom Curves.
+* sample_03.py : This sample presents the Event processing.
+* sample_04.py : First sample presents the Tone Function.
+* sample_05.py : Second sample presents the Tone Function.
 
 ### External libraries
 * None
