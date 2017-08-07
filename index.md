@@ -16,8 +16,6 @@ Integration of the 3dRudder (SDK v 1.0)
 ### Prerequisities 
 * OS Windows 7 minimum
 	
-## Built with
-
 ### Integrated Development Environment 
 * This programm was coded with Python.
 
