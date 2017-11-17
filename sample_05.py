@@ -92,28 +92,42 @@ def printToConsol(msg,color=-1):
     print(msg)    
 
 
-def PlayMarioTheme(sdk,fPitch=0.0):
+def PlayTheme(sdk,fPitch=0.0,numMusic=0):
     
-    listTone = [ Tone(660,10,15),Tone( 660,10,30),Tone(660,10,30),Tone(510,10,10),Tone(660,10,30),Tone(770,10,55),Tone(380,10,57),Tone(510,10,45),Tone(380,10,40),Tone(320,10,50),Tone(440,10,30),Tone(480,8,33),
-            	Tone( 450,10,15 ),Tone( 430,10,30 ),Tone( 380,10,20 ),Tone( 660, 8,20 ),Tone( 760, 5,15 ),Tone( 860,10,30 ),Tone( 700, 8,15 ),Tone( 760, 5,35 ),Tone( 660, 8,30 ),Tone( 520, 8,15 ),Tone( 580, 8,15 ),Tone( 480, 8,50 ),
-            	Tone( 510,10,45 ),Tone( 380,10,40 ),Tone( 320,10,50 ),Tone( 440,10,30 ),Tone( 480, 8,33 ),Tone( 450,10,15 ),Tone( 430,10,30 ),Tone( 380,10,20 ),Tone( 660, 8,20 ),Tone( 760, 5,15 ),Tone( 860,10,30 ),Tone( 700, 8,15 ),
-            	Tone( 760, 5,35 ),Tone( 660, 8,30 ),Tone( 520, 8,15 ),Tone( 580, 8,15 ),Tone( 480, 8,50 ),Tone( 500,10,30 ),Tone( 760,10,10 ),Tone( 720,10,15 ),Tone( 680,10,15 ),Tone( 620,15,30 ),Tone( 650,15,30 ),Tone( 380,10,15 ),
-            	Tone( 430,10,15 ),Tone( 500,10,30 ),Tone( 430,10,15 ),Tone( 500,10,10 ),Tone( 570,10,22 ),Tone( 500,10,30 ),Tone( 760,10,10 ),Tone( 720,10,15 ),Tone( 680,10,15 ),Tone( 620,15,30 ),Tone( 650,20,30 ),Tone( 1020,8,30 ),
-            	Tone( 1020,8,15 ),Tone( 1020,8,30 ),Tone( 380,10,30 ),Tone( 500,10,30 ),Tone( 760,10,10 ),Tone( 720,10,15 ),Tone( 680,10,15 ),Tone( 620,15,30 ),Tone( 650,15,30 ),Tone( 380,10,15 ),Tone( 430,10,15 ),Tone( 500,10,30 ),
-            	Tone( 430,10,15 ),Tone( 500,10,10 ),Tone( 570,10,42 ),Tone( 585,10,45 ),Tone( 550,10,42 ),Tone( 500,10,36 ),Tone( 380,10,30 ),Tone( 500,10,30 ),Tone( 500,10,15 ),Tone( 500,10,30 ),Tone( 500,10,30 ),Tone( 760,10,10 ),
-            	Tone( 720,10,15 ),Tone( 680,10,15 ),Tone( 620,15,30 ),Tone( 650,15,30 ),Tone( 380,10,15 ),Tone( 430,10,15 ),Tone( 500,10,30 ),Tone( 430,10,15 ),Tone( 500,10,10 ),Tone( 570,10,22 ),Tone( 500,10,30 ),Tone( 760,10,10 ),
-            	Tone( 720,10,15 ),Tone( 680,10,15 ),Tone( 620,15,30 ),Tone( 650,20,30 ),Tone( 1020,8,30 ),Tone( 1020,8,15 ),Tone( 1020,8,30 ),Tone( 380,10,30 ),Tone( 500,10,30 ),Tone( 760,10,10 ),Tone( 720,10,15 ),Tone( 680,10,15 ),
-            	Tone( 620,15,30 ),Tone( 650,15,30 ),Tone( 380,10,15 ),Tone( 430,10,15 ),Tone( 500,10,30 ),Tone( 430,10,15 ),Tone( 500,10,10 ),Tone( 570,10,42 ),Tone( 585,10,45 ),Tone( 550,10,42 ),Tone( 500,10,36 ),Tone( 380,10,30 ),
-            	Tone( 500,10,30 ),Tone( 500,10,15 ),Tone( 500,10,30 ),Tone( 500, 6,15 ),Tone( 500, 8,30 ),Tone( 500, 6,35 ),Tone( 500, 8,15 ),Tone( 580, 8,35 ),Tone( 660, 8,15 ),Tone( 500, 8,30 ),Tone( 430, 8,15 ),Tone( 380, 8,60 ),
-            	Tone( 500, 6,15 ),Tone( 500, 8,30 ),Tone( 500, 6,35 ),Tone( 500, 8,15 ),Tone( 580, 8,15 ),Tone( 660, 8,55 ),Tone( 870, 8,32 ),Tone( 760, 8,60 ),Tone( 500, 6,15 ),Tone( 500, 8,30 ),Tone( 500, 6,35 ),Tone( 500, 8,15 ),
-            	Tone( 580, 8,35 ),Tone( 660, 8,15 ),Tone( 500, 8,30 ),Tone( 430, 8,15 ),Tone( 380, 8,60 ),Tone( 660,10,15 ),Tone( 660,10,30 ),Tone( 660,10,30 ),Tone( 510,10,10 ),Tone( 660,10,30 ),Tone( 770,10,55 ),Tone( 380,10,57 ) 
-                ]
+    
+    # Mario
+    if(numMusic=='0'):
+        listTone = [ Tone(660,10,15),Tone( 660,10,30),Tone(660,10,30),Tone(510,10,10),Tone(660,10,30),Tone(770,10,55),Tone(380,10,57),Tone(510,10,45),Tone(380,10,40),Tone(320,10,50),Tone(440,10,30),Tone(480,8,33),
+                    Tone( 450,10,15 ),Tone( 430,10,30 ),Tone( 380,10,20 ),Tone( 660, 8,20 ),Tone( 760, 5,15 ),Tone( 860,10,30 ),Tone( 700, 8,15 ),Tone( 760, 5,35 ),Tone( 660, 8,30 ),Tone( 520, 8,15 ),Tone( 580, 8,15 ),Tone( 480, 8,50 ),
+                    Tone( 510,10,45 ),Tone( 380,10,40 ),Tone( 320,10,50 ),Tone( 440,10,30 ),Tone( 480, 8,33 ),Tone( 450,10,15 ),Tone( 430,10,30 ),Tone( 380,10,20 ),Tone( 660, 8,20 ),Tone( 760, 5,15 ),Tone( 860,10,30 ),Tone( 700, 8,15 ),
+                    Tone( 760, 5,35 ),Tone( 660, 8,30 ),Tone( 520, 8,15 ),Tone( 580, 8,15 ),Tone( 480, 8,50 ),Tone( 500,10,30 ),Tone( 760,10,10 ),Tone( 720,10,15 ),Tone( 680,10,15 ),Tone( 620,15,30 ),Tone( 650,15,30 ),Tone( 380,10,15 ),
+                    Tone( 430,10,15 ),Tone( 500,10,30 ),Tone( 430,10,15 ),Tone( 500,10,10 ),Tone( 570,10,22 ),Tone( 500,10,30 ),Tone( 760,10,10 ),Tone( 720,10,15 ),Tone( 680,10,15 ),Tone( 620,15,30 ),Tone( 650,20,30 ),Tone( 1020,8,30 ),
+                    Tone( 1020,8,15 ),Tone( 1020,8,30 ),Tone( 380,10,30 ),Tone( 500,10,30 ),Tone( 760,10,10 ),Tone( 720,10,15 ),Tone( 680,10,15 ),Tone( 620,15,30 ),Tone( 650,15,30 ),Tone( 380,10,15 ),Tone( 430,10,15 ),Tone( 500,10,30 ),
+                    Tone( 430,10,15 ),Tone( 500,10,10 ),Tone( 570,10,42 ),Tone( 585,10,45 ),Tone( 550,10,42 ),Tone( 500,10,36 ),Tone( 380,10,30 ),Tone( 500,10,30 ),Tone( 500,10,15 ),Tone( 500,10,30 ),Tone( 500,10,30 ),Tone( 760,10,10 ),
+                    Tone( 720,10,15 ),Tone( 680,10,15 ),Tone( 620,15,30 ),Tone( 650,15,30 ),Tone( 380,10,15 ),Tone( 430,10,15 ),Tone( 500,10,30 ),Tone( 430,10,15 ),Tone( 500,10,10 ),Tone( 570,10,22 ),Tone( 500,10,30 ),Tone( 760,10,10 ),
+                    Tone( 720,10,15 ),Tone( 680,10,15 ),Tone( 620,15,30 ),Tone( 650,20,30 ),Tone( 1020,8,30 ),Tone( 1020,8,15 ),Tone( 1020,8,30 ),Tone( 380,10,30 ),Tone( 500,10,30 ),Tone( 760,10,10 ),Tone( 720,10,15 ),Tone( 680,10,15 ),
+                    Tone( 620,15,30 ),Tone( 650,15,30 ),Tone( 380,10,15 ),Tone( 430,10,15 ),Tone( 500,10,30 ),Tone( 430,10,15 ),Tone( 500,10,10 ),Tone( 570,10,42 ),Tone( 585,10,45 ),Tone( 550,10,42 ),Tone( 500,10,36 ),Tone( 380,10,30 ),
+                    Tone( 500,10,30 ),Tone( 500,10,15 ),Tone( 500,10,30 ),Tone( 500, 6,15 ),Tone( 500, 8,30 ),Tone( 500, 6,35 ),Tone( 500, 8,15 ),Tone( 580, 8,35 ),Tone( 660, 8,15 ),Tone( 500, 8,30 ),Tone( 430, 8,15 ),Tone( 380, 8,60 ),
+                    Tone( 500, 6,15 ),Tone( 500, 8,30 ),Tone( 500, 6,35 ),Tone( 500, 8,15 ),Tone( 580, 8,15 ),Tone( 660, 8,55 ),Tone( 870, 8,32 ),Tone( 760, 8,60 ),Tone( 500, 6,15 ),Tone( 500, 8,30 ),Tone( 500, 6,35 ),Tone( 500, 8,15 ),
+                    Tone( 580, 8,35 ),Tone( 660, 8,15 ),Tone( 500, 8,30 ),Tone( 430, 8,15 ),Tone( 380, 8,60 ),Tone( 660,10,15 ),Tone( 660,10,30 ),Tone( 660,10,30 ),Tone( 510,10,10 ),Tone( 660,10,30 ),Tone( 770,10,55 ),Tone( 380,10,57 ) 
+                    ]
+    # MI
+    if(numMusic=='1'):
+        listTone = [ Tone(784,15,30),
+                    Tone(784,15,30 ),Tone(784,15,30 ),Tone(932,15,15 ),Tone( 1047,15,15 ),Tone( 784,15,30 ),Tone( 784,15,30 ),Tone( 699,15,15 ),Tone( 740,15,15 ),Tone( 784,15,30 ),Tone( 784,15,30),Tone( 932,15,15 ),Tone( 1047,15,15),
+                    Tone( 784,15,30 ),Tone( 784,15,30),Tone( 699,15,15),Tone( 740,15,15 ),Tone( 932,15, 0 ),Tone( 784,15, 0 ),Tone( 587,120,7 ),Tone( 932,15, 0 ),Tone( 784,15, 0 ),Tone( 554,120,7),Tone( 932,15, 0 ),Tone( 784,15, 0 ),
+                    Tone(523,120,15 ),Tone(466,15,0 ),Tone(523,150,0),
+                    Tone(784,15,30 ),Tone(784,15,30),Tone(699,15,15 ),Tone(740,15,15 ),Tone(932,15, 0 ),Tone(784,15, 0 ),Tone(587,120,7 ),Tone(932,15, 0 ),Tone(784,15, 0 ),Tone(554,120,7 ),Tone( 932,15, 0 ),Tone( 784,15, 0),
+                    Tone( 523,120,15 ),Tone( 466,15,0),Tone( 523,150,0) 
+                    ]
+        
 
-    if sdk.IsDeviceConnected(0):
-        for i in range(0,len(listTone)) :
-            if(fPitch!=0.0) :
-                listTone[i].m_nFrequency = listTone[i].m_nFrequency * (int)(2.0 * fPitch)
-            sdk.PlaySndEx(0,1,listTone[i])
+    if(numMusic=='1' or  numMusic=='0'):
+        if sdk.IsDeviceConnected(0):
+            for i in range(0,len(listTone)) :
+                if(fPitch!=0.0) :
+                    listTone[i].m_nFrequency = listTone[i].m_nFrequency * (int)(2.0 * fPitch)
+                sdk.PlaySndEx(0,1,listTone[i])
 
     
 #-------------------------------------
@@ -146,7 +160,7 @@ def main():
         while True:
             
             if (sdk.IsDeviceConnected(nPortNumber)):
-                printToConsol("press any key to play, 'Q' to quit,'+' or '-' to change the pitch",ConsoleColor.ccPurple.value)
+                printToConsol("press any key to play, 'Q' to quit,'+' or '-' to change the pitch, '0'(Mario) or '1' (MI) music",ConsoleColor.ccPurple.value)
                 nPitch=0
                 fPitch=0.0
                 while True:
@@ -168,7 +182,10 @@ def main():
                     else : break
                 if (choice == 'Q' or choice == 'q'):
                     break
-                PlayMarioTheme(sdk,fPitch)
+                if(choice=='0' or choice=='1'):
+                    PlayTheme(sdk,fPitch,choice)
+                else:
+                    PlayTheme(sdk,fPitch)
             else:
                 time.sleep(1)
         
