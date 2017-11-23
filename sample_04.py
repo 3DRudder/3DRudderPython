@@ -24,9 +24,9 @@ val_max=platform.architecture()
 
 print(val_max[0])
 if (val_max[0]=='32bit') : 
-    from win32.Python352.ns3DRudder import * #import SDk 3dRudder
+    from win32.Python363.ns3DRudder import * #import SDk 3dRudder
 else:
-    from x64.Python352.ns3DRudder import * #import SDk 3dRudder
+    from x64.Python363.ns3DRudder import * #import SDk 3dRudder
 
 
 #-------------------------------------

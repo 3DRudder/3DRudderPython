@@ -16,16 +16,14 @@ import sys
 import time
 import platform
 
-
-
 # 32 or 64 bit
 val_max=platform.architecture()
 
 print(val_max[0])
 if (val_max[0]=='32bit') : 
-	from win32.Python352.ns3DRudder import * #import SDk 3dRudder
+	from win32.Python363.ns3DRudder import * #import SDk 3dRudder
 else:
-	from x64.Python352.ns3DRudder import * #import SDk 3dRudder
+	from x64.Python363.ns3DRudder import * #import SDk 3dRudder
 
 	
 
@@ -199,7 +197,7 @@ try:
     print ("Version FirmWare : {:1x}".format(version))
 
     #Get the number of the 3dRudder are connected
-    print ("Get the Number the 3dRudder are connected : {:1x}".format(sdk.GetNumberOfConnectedDevice()))
+    print ("Get the Number of the 3dRudder are connected : {:1x}".format(sdk.GetNumberOfConnectedDevice()))
 
     #Play a sound wih the 3dRudder
     sdk.PlaySnd(nPortNumber,1000,1000)

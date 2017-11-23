@@ -24,6 +24,7 @@ Integration of the 3dRudder (SDK v 1.0)
 ### Language 
 * Python 2.7
 * Python 3.5.2
+* Python 3.6.3
 
 ### samples 
 
