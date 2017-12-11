@@ -11,7 +11,10 @@ This is the Release of the 3dRudder Python Module.
 Integration of the 3dRudder (SDK v 1.0)
 
 ## Getting Started
-* https://www.3drudder.com/start/
+
+Before using the SDK, verifying that you made the update of Firmware of your 3dRudder.
+
+For that purpose, it is necessary to install the Dashboard software. https://www.3drudder.com/start/
 
 ### Prerequisities 
 * OS Windows 7 minimum
